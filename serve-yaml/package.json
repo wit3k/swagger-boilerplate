@@ -1,0 +1,13 @@
+{
+  "name": "multi-file-swagger-server",
+  "version": "1.0.0",
+  "description": "Multi-file Swagger server",
+  "main": "serve-yaml.js",
+  "scripts": {
+    "start": "node serve-yaml.js"
+  },
+  "dependencies": {
+    "json-refs": "^2.0.3",
+    "yaml-js": "^0.1.3"
+  }
+}
