@@ -10,7 +10,10 @@ properties:
     type: integer
   owner:
     type: string
+    format: uuid
   editor:
     type: string
+    format: uuid
   archiver:
     type: string
+    format: uuid
