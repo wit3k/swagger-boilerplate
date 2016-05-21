@@ -1,7 +1,17 @@
-var resolve = require('json-refs').resolveRefs;
-var YAML = require('yaml-js');
-var fs = require('fs');
 var http = require('http');
+var fs = require('fs');
+var jsonRefs = require('json-refs');
+var YAML = require('yaml-js');
+var options = {
+  filter: ['relative', 'remote'],
+  loaderOptions: {
+    processContent : function (res, callback) {
+      callback(null, YAML.load(res.text));
+    }
+  }
+};
+process.chdir('../spec');
+var root = YAML.load(fs.readFileSync('index.yaml').toString());
 
 var server = http.createServer(function (request, response) {
   response.setHeader('Access-Control-Allow-Origin', '*');
@@ -9,13 +19,8 @@ var server = http.createServer(function (request, response) {
   response.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
   response.setHeader('Access-Control-Allow-Credentials', true);
   try {
-    var root = YAML.load(fs.readFileSync('../spec/index.yaml').toString());
-    var options = {
-      processContent: function (content) {
-        return YAML.load(content);
-      }
-    };
-    resolve(root, options).then(function (results) {
+    jsonRefs.clearCache();
+    jsonRefs.resolveRefs(root, options).then(function (results) {
       response.writeHead(200, {"Content-Type": "text/plain"});
       response.end(YAML.dump(results.resolved));
     });

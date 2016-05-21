@@ -1,0 +1,16 @@
+required:
+  - created
+  - owner
+properties:
+  created:
+    type: integer
+  edited:
+    type: integer
+  archived:
+    type: integer
+  owner:
+    type: string
+  editor:
+    type: string
+  archiver:
+    type: string

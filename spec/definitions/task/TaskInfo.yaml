@@ -1,0 +1,42 @@
+required:
+  - id
+  - name
+  - projectId
+  - context
+  - urgency
+  - importance
+  - timeDivident
+properties:
+  id:
+    type: integer
+    format: int64
+  audit:
+    $ref: "#/definitions/Audit"
+  name:
+    type: string
+  description:
+    type: string
+  projectId:
+    type: integer
+  tag:
+    type: array
+    items:
+      type: string
+  context:
+    type: array
+    items:
+      type: string
+  deadline:
+    type: integer
+  urgentFrom:
+    type: integer
+  estimation:
+    type: integer
+  urgency:
+    type: integer
+  importance:
+    type: integer
+  timeDivident:
+    type: integer
+  order:
+    type: integer

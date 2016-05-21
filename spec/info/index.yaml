@@ -1,0 +1,10 @@
+version: '1.0.0'
+title: Tasks
+description: Tasks management service
+contact:
+  name: Witold Adamus
+  email: witekadamus@gmail.com
+  url: http://wit3k.pl
+license:
+  name: MIT
+  url: http://opensource.org/licenses/MIT

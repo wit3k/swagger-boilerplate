@@ -1,0 +1,10 @@
+TaskInfo:
+  $ref: ./task/TaskInfo.yaml
+TaskInput:
+  $ref: ./task/TaskInput.yaml
+Audit:
+  $ref: ./common/Audit.yaml
+PatchOperation:
+  $ref: ./common/PatchOperation.yaml
+ErrorModel:
+  $ref: ./common/ErrorModel.yaml
