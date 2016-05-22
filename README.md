@@ -38,6 +38,10 @@ Most important files are:
   - `definitions`
       - All needed data structures for the module
 
+## Used conventions
+- `patch` http actions follow RFC-6902 (http://tools.ietf.org/html/rfc6902)
+  - aka `Please. Don't Patch Like An Idiot` (http://williamdurand.fr/2014/02/14/please-do-not-patch-like-an-idiot/)
+
 ## Todo
 - Authentication
 - Complete "Tasks" project documentation
