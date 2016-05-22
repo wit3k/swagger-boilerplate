@@ -25,15 +25,23 @@ To run swagger-ui server, yaml server and open swagger-ui in browser simply run:
 
 ## Directories structure
 Remember that only directory which content should be edited is `spec`
-- `info`
-  - Common information about documented project
-- `definitions`
-  - All needed data structures
-- `paths`
-  - All endpoints described in documentation
+You can edit all yaml files and a given structure is only a proposition.
+Most important files are:
+- `index.yaml` your first step should be aditing this document
+- `info.yaml` your second step, let the world know who is responsible
+- `tags.yaml` the place to list all paths tags
+- `paths.yaml` list all paths here. Putting every path pattern into separate file is highly suggested
+- `definitions.yaml` list all definitions here. Putting every definition into separate file is highly suggested as well
+- `Directories` - every directory defines a separate module for the system. Modules contain:
+  - `paths`
+    - yaml files with paths for the module. Every path pattern should end up in a new file
+  - `definitions`
+      - All needed data structures for the module
 
 ## Todo
 - Authentication
-- Nested namespaces
-- Hypermedia
-- HATEOAS
+- Complete "Tasks" project documentation
+- API Testing
+- Nested modules
+- Hypermedia / HATEOAS
+- API Versioning

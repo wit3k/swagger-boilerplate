@@ -11,12 +11,10 @@ produces:
   - application/json
   - application/xml
 tags:
-  -
-    name: task
-    description: Everything about your Tasks
+  $ref: ./tags.yaml
 info:
-  $ref: ./info/index.yaml
+  $ref: ./info.yaml
 paths:
-  $ref: ./paths/index.yaml
+  $ref: ./paths.yaml
 definitions:
-  $ref: ./definitions/index.yaml
+  $ref: ./definitions.yaml

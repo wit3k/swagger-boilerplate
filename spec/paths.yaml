@@ -1,0 +1,4 @@
+/tasks:
+  $ref: ./tasks/paths/tasks.yaml
+/tasks/{id}:
+  $ref: ./tasks/paths/tasks_id.yaml

@@ -1,0 +1,6 @@
+-
+  name: auth
+  description: Authentication related paths
+-
+  name: task
+  description: Everything about your Tasks
