@@ -1,3 +1,9 @@
 swagger-ui/
 *node_modules/
 *npm-debug.log
+.idea/copyright/
+.idea/misc.xml
+.idea/modules.xml
+.idea/tasks.iml
+.idea/workspace.xml
+.idea/vcs.xml

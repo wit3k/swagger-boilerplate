@@ -41,6 +41,12 @@ Most important files are:
 ## Used conventions
 - `patch` http actions follow RFC-6902 (http://tools.ietf.org/html/rfc6902)
   - aka `Please. Don't Patch Like An Idiot` (http://williamdurand.fr/2014/02/14/please-do-not-patch-like-an-idiot/)
+    - ***TL;DR***
+        - do **NOT** create new endpoint per edited field of resource
+        - do **NOT** patch via sending partial object inside payload
+        - do **NOT** patch via querry params
+        - **DO patch** with "oplogish" array with list of atomic operations
+        - plus my personal advice - DO patch with document version info to avoid unexpected overwrites 
 
 ## Todo
 - Authentication
