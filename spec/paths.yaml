@@ -2,10 +2,10 @@
   $ref: ./projects/paths/projects.yaml
 /projects/{id}:
   $ref: ./projects/paths/projects_id.yaml
-/projects/{id}/tasks:
-  $ref: ./projects/submodules/tasks/paths/tasks.yaml
-/projects/{id}/tasks/{id}:
-  $ref: ./projects/submodules/tasks/paths/tasks_id.yaml
+/tasks:
+  $ref: ./tasks/paths/tasks.yaml
+/tasks/{id}:
+  $ref: ./tasks/paths/tasks_id.yaml
 /tags:
   $ref: ./tags/paths/tags.yaml
 /tags/{id}:
