@@ -1,45 +1,33 @@
 get:
   tags:
-    - task
-  description: Returns all tasks from the system that the user has access to
-  operationId: findTasks
+    - project
+  description: Returns all projects from the system that the user has access to.
+  operationId: findProjects
   produces:
     - application/json
     - application/xml
   parameters:
-    - name: context
+    - name: search
+      in: query
+      description: Full text seach inside 'name' and 'description'
+      required: false
+      type: string
+    - name: contexts
       in: query
       description: contexts to filter by
       required: false
       type: array
       items:
         type: string
-    - name: name
+        format: uuid
+    - name: groups
       in: query
-      description: name to filter by
-      required: false
-      type: string
-    - name: description
-      in: query
-      description: description to filter by
-      required: false
-      type: string
-    - name: projectId
-      in: query
-      description: project id's to filter by
+      description: groups to filter by
       required: false
       type: array
       items:
         type: string
         format: uuid
-      collectionFormat: csv
-    - name: tags
-      in: query
-      description: tags to filter by
-      required: false
-      type: array
-      items:
-        type: string
       collectionFormat: csv
     - name: limit
       in: query
@@ -55,7 +43,7 @@ get:
       format: int32
   responses:
     '200':
-      description: task response
+      description: project response
       headers:
         'Total-count':
           description: information about total count of elements matching given criteria
@@ -63,31 +51,31 @@ get:
       schema:
         type: array
         items:
-          $ref: '#/definitions/TaskInfo'
+          $ref: '#/definitions/ProjectInfo'
     default:
-      description: unexpected error
+      description: Unexpected error
       schema:
         $ref: '#/definitions/ErrorModel'
 post:
   tags:
-    - task
-  description: Creates a new task.  Duplicates are not allowed
-  operationId: addTask
+    - project
+  description: Creates a new project.  Duplicates are not allowed
+  operationId: addProject
   produces:
     - application/json
     - application/xml
   parameters:
-    - name: task
+    - name: project
       in: body
-      description: Task to add
+      description: Project to add
       required: true
       schema:
-        $ref: '#/definitions/TaskInput'
+        $ref: '#/definitions/ProjectInput'
   responses:
     '200':
-      description: task response
+      description: project response
       schema:
-        $ref: '#/definitions/TaskInfo'
+        $ref: '#/definitions/ProjectInfo'
     default:
       description: unexpected error
       schema:

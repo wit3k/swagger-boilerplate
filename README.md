@@ -22,6 +22,7 @@ To run swagger-ui server, yaml server and open swagger-ui in browser simply run:
 - Swagger-ui (http://swagger.io/swagger-ui/)
 - JSON Reference (https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03)
   - with json-refs (https://github.com/whitlockjc/json-refs)
+- `Spec` directory containing example specification
 
 ## Directories structure
 Remember that only directory which content should be edited is `spec`
@@ -50,7 +51,6 @@ Most important files are:
 
 ## Todo
 - Authentication
-- Complete "Tasks" project documentation
 - API Testing
 - Nested modules
 - Hypermedia / HATEOAS

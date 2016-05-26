@@ -1,0 +1,16 @@
+required:
+  - context
+  - name
+properties:
+  context:
+    type: string
+    format: uuid
+  name:
+    type: string
+  description:
+    type: string
+  groups:
+    type: array
+    items:
+      type: string
+      format: uuid

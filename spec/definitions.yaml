@@ -1,7 +1,22 @@
+ProjectInfo:
+  $ref: ./projects/definitions/ProjectInfo.yaml
+ProjectInput:
+  $ref: ./projects/definitions/ProjectInput.yaml
 TaskInfo:
-  $ref: ./tasks/definitions/TaskInfo.yaml
+  $ref: ./projects/submodules/tasks/definitions/TaskInfo.yaml
 TaskInput:
-  $ref: ./tasks/definitions/TaskInput.yaml
+  $ref: ./projects/submodules/tasks/definitions/TaskInput.yaml
+
+#TagInfo:
+#  $ref: ./tags/definitions/TagInfo.yaml
+#TagInput:
+#  $ref: ./tags/definitions/TagInput.yaml
+#
+#ContextInfo:
+#  $ref: ./contexts/definitions/ContextInfo.yaml
+#ContextInput:
+#  $ref: ./contexts/definitions/ContextInput.yaml
+
 Audit:
   $ref: ./common/definitions/Audit.yaml
 PatchOperation:

@@ -2,5 +2,14 @@
   name: auth
   description: Authentication related paths
 -
+  name: project
+  description: Everything about Projects
+-
+  name: tags
+  description: Everything about Tags
+-
   name: task
-  description: Everything about your Tasks
+  description: Everything about Tasks
+-
+  name: contexts
+  description: Everything about Contexts

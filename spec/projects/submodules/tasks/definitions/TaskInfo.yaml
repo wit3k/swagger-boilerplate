@@ -1,8 +1,9 @@
 required:
   - id
-  - name
+  - audit
   - projectId
   - context
+  - name
   - urgency
   - importance
   - timeDivident
@@ -12,25 +13,26 @@ properties:
     format: uuid
   audit:
     $ref: "#/definitions/Audit"
-  name:
-    type: string
-  description:
-    type: string
   projectId:
-    type: string
-    format: uuid
-  tag:
+      type: string
+      format: uuid
+  tags:
     type: array
     items:
       type: string
   context:
-    type: array
-    items:
-      type: string
+    type: string
+    format: uuid
+  name:
+    type: string
+  description:
+    type: string
   deadline:
-    type: integer
+    type: string
+    format: date-time
   urgentFrom:
-    type: integer
+    type: string
+    format: date-time
   estimation:
     type: integer
   urgency:
@@ -41,3 +43,8 @@ properties:
     type: integer
   order:
     type: integer
+  groups:
+    type: array
+    items:
+      type: string
+      format: uuid

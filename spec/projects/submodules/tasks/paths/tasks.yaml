@@ -1,0 +1,99 @@
+get:
+  tags:
+    - task
+  description: Returns all tasks from the system that the user has access to.
+  operationId: findTasks
+  produces:
+    - application/json
+    - application/xml
+  parameters:
+    - name: search
+      in: query
+      description: Full text seach inside 'name' and 'description'
+      required: false
+      type: string
+    - name: projectIds
+      in: query
+      description: project id's to filter by
+      required: false
+      type: array
+      items:
+        type: string
+        format: uuid
+      collectionFormat: csv
+    - name: contexts
+      in: query
+      description: contexts to filter by
+      required: false
+      type: array
+      items:
+        type: string
+        format: uuid
+    - name: tags
+      in: query
+      description: tags to filter by
+      required: false
+      type: array
+      items:
+        type: string
+      collectionFormat: csv
+    - name: groups
+      in: query
+      description: groups to filter by
+      required: false
+      type: array
+      items:
+        type: string
+        format: uuid
+      collectionFormat: csv
+    - name: limit
+      in: query
+      description: maximum number of results to return
+      required: false
+      type: integer
+      format: int32
+    - name: offset
+      in: query
+      description: offset of results to return
+      required: false
+      type: integer
+      format: int32
+  responses:
+    '200':
+      description: task response
+      headers:
+        'Total-count':
+          description: information about total count of elements matching given criteria
+          type: integer
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/TaskInfo'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/ErrorModel'
+post:
+  tags:
+    - task
+  description: Creates a new task.  Duplicates are not allowed
+  operationId: addTask
+  produces:
+    - application/json
+    - application/xml
+  parameters:
+    - name: task
+      in: body
+      description: Task to add
+      required: true
+      schema:
+        $ref: '#/definitions/TaskInput'
+  responses:
+    '200':
+      description: task response
+      schema:
+        $ref: '#/definitions/TaskInfo'
+    default:
+      description: unexpected error
+      schema:
+        $ref: '#/definitions/ErrorModel'

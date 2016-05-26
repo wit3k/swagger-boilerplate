@@ -3,11 +3,14 @@ required:
   - owner
 properties:
   created:
-    type: integer
+    type: string
+    format: date-time
   edited:
-    type: integer
+    type: string
+    format: date-time
   archived:
-    type: integer
+    type: string
+    format: date-time
   owner:
     type: string
     format: uuid

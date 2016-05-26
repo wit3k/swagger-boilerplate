@@ -1,0 +1,23 @@
+required:
+  - id
+  - audit
+  - context
+  - name
+properties:
+  id:
+    type: string
+    format: uuid
+  audit:
+    $ref: "#/definitions/Audit"
+  context:
+    type: string
+    format: uuid
+  name:
+    type: string
+  description:
+    type: string
+  groups:
+    type: array
+    items:
+      type: string
+      format: uuid
