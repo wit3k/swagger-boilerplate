@@ -7,6 +7,7 @@ required:
   - urgency
   - importance
   - timeDivident
+  - groups
 properties:
   id:
     type: string

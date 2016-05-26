@@ -1,6 +1,7 @@
 required:
   - context
   - name
+  - groups
 properties:
   context:
     type: string

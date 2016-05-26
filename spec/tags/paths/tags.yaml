@@ -1,25 +1,17 @@
 get:
   tags:
-    - project
-  description: Returns all projects from the system that the user has access to.
-  operationId: findProjects
+    - tags
+  description: Returns all tags from the system that the user has access to.
+  operationId: findTags
   produces:
     - application/json
     - application/xml
   parameters:
     - name: search
       in: query
-      description: Full text seach inside **name** and **description**
+      description: Full text seach inside **id**
       required: false
       type: string
-    - name: contexts
-      in: query
-      description: contexts to filter by
-      required: false
-      type: array
-      items:
-        type: string
-        format: uuid
     - name: groups
       in: query
       description: groups to filter by
@@ -41,46 +33,42 @@ get:
       required: false
       type: integer
       format: int32
-    - name: orderby
-      in: query
-      description: sort results by a given key
-      required: false
-      type: string
   responses:
     '200':
-      description: project response
+      description: tag response
       headers:
         'Total-count':
-          description: information about total count of elements matching given criteria
+          description: Information about total count of elements matching given criteria
           type: integer
       schema:
         type: array
         items:
-          $ref: '#/definitions/ProjectInfo'
+          $ref: '#/definitions/TagInfo'
     default:
       description: Unexpected error
       schema:
         $ref: '#/definitions/ErrorModel'
+
 post:
   tags:
-    - project
-  description: Creates a new project.  Duplicates are not allowed
-  operationId: addProject
+    - tags
+  description: Creates a new tag or adds current group to it.
+  operationId: addTag
   produces:
     - application/json
     - application/xml
   parameters:
-    - name: project
+    - name: tag
       in: body
-      description: Project to add
+      description: Tag to add
       required: true
       schema:
-        $ref: '#/definitions/ProjectInput'
+        $ref: '#/definitions/TagInput'
   responses:
     '200':
-      description: project response
+      description: tag response
       schema:
-        $ref: '#/definitions/ProjectInfo'
+        $ref: '#/definitions/TagInfo'
     default:
       description: unexpected error
       schema:

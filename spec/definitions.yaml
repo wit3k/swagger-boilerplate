@@ -7,11 +7,11 @@ TaskInfo:
 TaskInput:
   $ref: ./projects/submodules/tasks/definitions/TaskInput.yaml
 
-#TagInfo:
-#  $ref: ./tags/definitions/TagInfo.yaml
-#TagInput:
-#  $ref: ./tags/definitions/TagInput.yaml
-#
+TagInfo:
+  $ref: ./tags/definitions/TagInfo.yaml
+TagInput:
+  $ref: ./tags/definitions/TagInput.yaml
+
 #ContextInfo:
 #  $ref: ./contexts/definitions/ContextInfo.yaml
 #ContextInput:

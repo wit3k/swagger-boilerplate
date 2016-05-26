@@ -1,22 +1,13 @@
 required:
   - id
   - audit
-  - context
-  - name
   - groups
 properties:
   id:
     type: string
-    format: uuid
+    description: tags *name* and *id* is the same entity
   audit:
     $ref: "#/definitions/Audit"
-  context:
-    type: string
-    format: uuid
-  name:
-    type: string
-  description:
-    type: string
   groups:
     type: array
     items:

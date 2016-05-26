@@ -6,10 +6,10 @@
   $ref: ./projects/submodules/tasks/paths/tasks.yaml
 /projects/{id}/tasks/{id}:
   $ref: ./projects/submodules/tasks/paths/tasks_id.yaml
-#/tags:
-#  $ref: ./tasks/paths/tags.yaml
-#/tags/{id}:
-#  $ref: ./contexts/paths/tags_id.yaml
+/tags:
+  $ref: ./tags/paths/tags.yaml
+/tags/{id}:
+  $ref: ./tags/paths/tags_id.yaml
 #/contexts:
 #  $ref: ./contexts/paths/contexts.yaml
 #/contexts/{id}:

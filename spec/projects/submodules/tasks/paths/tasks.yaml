@@ -9,7 +9,7 @@ get:
   parameters:
     - name: search
       in: query
-      description: Full text seach inside 'name' and 'description'
+      description: Full text seach inside **name** and **description**
       required: false
       type: string
     - name: projectIds
@@ -58,6 +58,11 @@ get:
       required: false
       type: integer
       format: int32
+    - name: orderby
+      in: query
+      description: sort results by a given key
+      required: false
+      type: string
   responses:
     '200':
       description: task response
@@ -90,10 +95,14 @@ post:
         $ref: '#/definitions/TaskInput'
   responses:
     '200':
-      description: task response
+      description: Task response
       schema:
         $ref: '#/definitions/TaskInfo'
+    '424':
+      description: Failed dependency when **projectId**, **tag**, **context** or **group** doesn't exist
+      schema:
+              $ref: '#/definitions/ErrorModel'
     default:
-      description: unexpected error
+      description: Unexpected error
       schema:
         $ref: '#/definitions/ErrorModel'

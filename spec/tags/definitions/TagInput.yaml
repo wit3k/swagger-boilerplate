@@ -1,0 +1,7 @@
+required:
+  - id
+  - groups
+properties:
+  id:
+    type: string
+    description: tags *name* and *id* is the same entity

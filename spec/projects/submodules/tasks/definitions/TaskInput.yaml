@@ -5,6 +5,7 @@ required:
   - urgency
   - importance
   - timeDivident
+  - groups
 properties:
   projectId:
       type: string
