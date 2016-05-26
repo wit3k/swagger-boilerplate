@@ -1,0 +1,70 @@
+get:
+  tags:
+    - contexts
+  description: Returns all contexts from the system that the user has access to.
+  operationId: findContexts
+  produces:
+    - application/json
+    - application/xml
+  parameters:
+    - name: search
+      in: query
+      description: Full text seach inside **name** and **description**
+      required: false
+      type: string
+    - name: limit
+      in: query
+      description: Maximum number of results to return
+      required: false
+      type: integer
+      format: int32
+    - name: offset
+      in: query
+      description: Offset of results to return
+      required: false
+      type: integer
+      format: int32
+    - name: orderby
+      in: query
+      description: Sort results by a given key
+      required: false
+      type: string
+  responses:
+    '200':
+      description: Context response
+      headers:
+        'Total-count':
+          description: Information about total count of elements matching given criteria
+          type: integer
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/ContextInfo'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/ErrorModel'
+post:
+  tags:
+    - contexts
+  description: Creates a new context.  Duplicates are not allowed
+  operationId: addContext
+  produces:
+    - application/json
+    - application/xml
+  parameters:
+    - name: context
+      in: body
+      description: Context to add
+      required: true
+      schema:
+        $ref: '#/definitions/ContextInput'
+  responses:
+    '200':
+      description: Context response
+      schema:
+        $ref: '#/definitions/ContextInfo'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/ErrorModel'

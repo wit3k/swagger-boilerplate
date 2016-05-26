@@ -47,7 +47,7 @@ delete:
         format: uuid
       collectionFormat: csv
   responses:
-    '200':
+    '202':
       description: Unsubscribed for tag
     '404':
       description: Not found

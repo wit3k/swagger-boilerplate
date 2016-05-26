@@ -1,0 +1,11 @@
+required:
+  - from
+  - to
+  - name
+properties:
+  from:
+    type: integer
+  to:
+    type: integer
+  name:
+    type: string

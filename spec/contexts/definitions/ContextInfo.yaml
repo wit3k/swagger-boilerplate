@@ -1,0 +1,20 @@
+required:
+  - id
+  - audit
+  - name
+properties:
+  id:
+    type: string
+    description: tags *name* and *id* is the same entity
+  audit:
+    $ref: "#/definitions/Audit"
+  name:
+    type: string
+  weeklyTimeTriggers:
+    type: array
+    items:
+      $ref: "#/definitions/ContextWeeklyTimeTrigger"
+  locationTriggers:
+    type: array
+    items:
+      $ref: "#/definitions/ContextLocationTrigger"

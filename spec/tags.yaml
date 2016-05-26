@@ -3,13 +3,13 @@
   description: Authentication related paths
 -
   name: project
-  description: Everything about Projects
--
-  name: tags
-  description: Everything about Tags
+  description: Projects
 -
   name: task
-  description: Everything about Tasks
+  description: Tasks for Projects
+-
+  name: tags
+  description: Tags for Tasks
 -
   name: contexts
-  description: Everything about Contexts
+  description: Context you're working in

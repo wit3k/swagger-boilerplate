@@ -1,0 +1,10 @@
+required:
+  - id
+  - name
+properties:
+  name:
+    type: string
+  weeklyTimeTriggers:
+    $ref: "#/definitions/ContextWeeklyTimeTrigger"
+  locationTriggers:
+    $ref: "#/definitions/ContextLocationTrigger"

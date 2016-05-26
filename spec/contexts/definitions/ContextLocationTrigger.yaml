@@ -1,0 +1,13 @@
+required:
+  - longitude
+  - latitude
+  - name
+properties:
+  longitude:
+    type: number
+  latitude:
+    type: number
+  radius:
+    type: number
+  name:
+    type: string

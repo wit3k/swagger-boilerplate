@@ -10,7 +10,7 @@
   $ref: ./tags/paths/tags.yaml
 /tags/{id}:
   $ref: ./tags/paths/tags_id.yaml
-#/contexts:
-#  $ref: ./contexts/paths/contexts.yaml
-#/contexts/{id}:
-#  $ref: ./contexts/paths/contexts_id.yaml
+/contexts:
+  $ref: ./contexts/paths/contexts.yaml
+/contexts/{id}:
+  $ref: ./contexts/paths/contexts_id.yaml

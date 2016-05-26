@@ -12,10 +12,14 @@ TagInfo:
 TagInput:
   $ref: ./tags/definitions/TagInput.yaml
 
-#ContextInfo:
-#  $ref: ./contexts/definitions/ContextInfo.yaml
-#ContextInput:
-#  $ref: ./contexts/definitions/ContextInput.yaml
+ContextInfo:
+  $ref: ./contexts/definitions/ContextInfo.yaml
+ContextInput:
+  $ref: ./contexts/definitions/ContextInput.yaml
+ContextWeeklyTimeTrigger:
+  $ref: ./contexts/definitions/ContextWeeklyTimeTrigger.yaml
+ContextLocationTrigger:
+  $ref: ./contexts/definitions/ContextLocationTrigger.yaml
 
 Audit:
   $ref: ./common/definitions/Audit.yaml
