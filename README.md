@@ -47,7 +47,7 @@ Most important files are:
       - All needed data structures for the module
 
 ## Used conventions
-- `naming convention` is a `lowerCamelCase` (http://c2.com/cgi/wiki?CamelCase)
+- Follow **zalando** restful api guidelines (https://github.com/zalando/restful-api-guidelines)
 - `patch` http actions follow RFC-6902 (http://tools.ietf.org/html/rfc6902)
   - aka `Please. Don't Patch Like An Idiot` (http://williamdurand.fr/2014/02/14/please-do-not-patch-like-an-idiot/)
     - ***TL;DR***
@@ -55,7 +55,10 @@ Most important files are:
         - do **NOT** patch via sending partial object inside payload
         - do **NOT** patch via query params
         - **DO patch** with "oplogish" array with list of atomic operations
-        - plus my personal advice - DO patch with document version info to avoid unexpected overwrites (TODO: after HATEOAS) 
+
+## Personal pro-tips
+- DO patch with document version info to avoid unexpected overwrites (TODO: after HATEOAS)
+- do NOT use tools like swagger-scala or other forms of inline API documentation tool - contract should be implementation agnostic and written BEFORE code not after
 
 ## Todo
 - Authentication
