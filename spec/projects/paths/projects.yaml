@@ -14,7 +14,7 @@ get:
       type: string
     - name: contexts
       in: query
-      description: contexts to filter by
+      description: Contexts to filter by
       required: false
       type: array
       items:
@@ -22,7 +22,7 @@ get:
         format: uuid
     - name: groups
       in: query
-      description: groups to filter by
+      description: Groups to filter by
       required: false
       type: array
       items:
@@ -31,27 +31,27 @@ get:
       collectionFormat: csv
     - name: limit
       in: query
-      description: maximum number of results to return
+      description: Maximum number of results to return
       required: false
       type: integer
       format: int32
     - name: offset
       in: query
-      description: offset of results to return
+      description: Offset of results to return
       required: false
       type: integer
       format: int32
     - name: orderby
       in: query
-      description: sort results by a given key
+      description: Sort results by a given key
       required: false
       type: string
   responses:
     '200':
-      description: project response
+      description: Project response
       headers:
         'Total-count':
-          description: information about total count of elements matching given criteria
+          description: Information about total count of elements matching given criteria
           type: integer
       schema:
         type: array
@@ -78,10 +78,10 @@ post:
         $ref: '#/definitions/ProjectInput'
   responses:
     '200':
-      description: project response
+      description: Project response
       schema:
         $ref: '#/definitions/ProjectInfo'
     default:
-      description: unexpected error
+      description: Unexpected error
       schema:
         $ref: '#/definitions/ErrorModel'

@@ -15,8 +15,8 @@ properties:
   audit:
     $ref: "#/definitions/Audit"
   projectId:
-      type: string
-      format: uuid
+    type: string
+    format: uuid
   tags:
     type: array
     items:
@@ -36,12 +36,20 @@ properties:
     format: date-time
   estimation:
     type: integer
+    minimum: 0
+    maximum: 10
   urgency:
     type: integer
+    minimum: 0
+    maximum: 10
   importance:
     type: integer
+    minimum: 0
+    maximum: 10
   timeDivident:
     type: integer
+    minimum: 0
+    maximum: 10
   order:
     type: integer
   groups:

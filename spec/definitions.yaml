@@ -3,9 +3,9 @@ ProjectInfo:
 ProjectInput:
   $ref: ./projects/definitions/ProjectInput.yaml
 TaskInfo:
-  $ref: ./projects/submodules/tasks/definitions/TaskInfo.yaml
+  $ref: ./tasks/definitions/TaskInfo.yaml
 TaskInput:
-  $ref: ./projects/submodules/tasks/definitions/TaskInput.yaml
+  $ref: ./tasks/definitions/TaskInput.yaml
 
 TagInfo:
   $ref: ./tags/definitions/TagInfo.yaml

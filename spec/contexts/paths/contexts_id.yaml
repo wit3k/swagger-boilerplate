@@ -19,9 +19,9 @@ get:
       schema:
         $ref: '#/definitions/ContextInfo'
     '404':
-      description: not found
+      description: Not found
     default:
-      description: unexpected error
+      description: Unexpected error
       schema:
         $ref: '#/definitions/ErrorModel'
 patch:

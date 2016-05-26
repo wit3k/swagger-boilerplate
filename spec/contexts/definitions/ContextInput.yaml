@@ -5,6 +5,10 @@ properties:
   name:
     type: string
   weeklyTimeTriggers:
-    $ref: "#/definitions/ContextWeeklyTimeTrigger"
+    type: array
+    items:
+      $ref: "#/definitions/ContextWeeklyTimeTrigger"
   locationTriggers:
-    $ref: "#/definitions/ContextLocationTrigger"
+    type: array
+    items:
+      $ref: "#/definitions/ContextLocationTrigger"

@@ -19,9 +19,9 @@ get:
       schema:
         $ref: '#/definitions/ProjectInfo'
     '404':
-      description: not found
+      description: Not found
     default:
-      description: unexpected error
+      description: Unexpected error
       schema:
         $ref: '#/definitions/ErrorModel'
 patch:
@@ -75,8 +75,8 @@ delete:
     '204':
       description: Project deleted
     '404':
-      description: not found
+      description: Not found
     default:
-      description: unexpected error
+      description: Unexpected error
       schema:
         $ref: '#/definitions/ErrorModel'

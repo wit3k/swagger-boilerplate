@@ -14,7 +14,7 @@ get:
       type: string
     - name: groups
       in: query
-      description: groups to filter by
+      description: Groups to filter by
       required: false
       type: array
       items:
@@ -23,19 +23,19 @@ get:
       collectionFormat: csv
     - name: limit
       in: query
-      description: maximum number of results to return
+      description: Maximum number of results to return
       required: false
       type: integer
       format: int32
     - name: offset
       in: query
-      description: offset of results to return
+      description: Offset of results to return
       required: false
       type: integer
       format: int32
   responses:
     '200':
-      description: tag response
+      description: Tag response
       headers:
         'Total-count':
           description: Information about total count of elements matching given criteria
@@ -66,10 +66,10 @@ post:
         $ref: '#/definitions/TagInput'
   responses:
     '200':
-      description: tag response
+      description: Tag response
       schema:
         $ref: '#/definitions/TagInfo'
     default:
-      description: unexpected error
+      description: Unexpected error
       schema:
         $ref: '#/definitions/ErrorModel'

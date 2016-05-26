@@ -4,4 +4,4 @@ required:
 properties:
   id:
     type: string
-    description: tags *name* and *id* is the same entity
+    description: Tags *name* and *id* is the same entity

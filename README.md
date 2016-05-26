@@ -18,6 +18,9 @@ To run swagger-ui server, yaml server and open swagger-ui in browser simply run:
 ./run.sh
 ```
 
+- To see swagger-ui with your compiled documentation visit: http://localhost:8080/?url=http://localhost:8090/
+- To fetch compiled swagger YAML visit: http://localhost:8090/
+
 ## Features included
 - Swagger-ui (http://swagger.io/swagger-ui/)
 - JSON Reference (https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03)
@@ -40,18 +43,20 @@ Most important files are:
       - All needed data structures for the module
 
 ## Used conventions
+- `naming convention` is a `lowerCamelCase` (http://c2.com/cgi/wiki?CamelCase)
 - `patch` http actions follow RFC-6902 (http://tools.ietf.org/html/rfc6902)
   - aka `Please. Don't Patch Like An Idiot` (http://williamdurand.fr/2014/02/14/please-do-not-patch-like-an-idiot/)
     - ***TL;DR***
         - do **NOT** create new endpoint per edited field of resource
         - do **NOT** patch via sending partial object inside payload
-        - do **NOT** patch via querry params
+        - do **NOT** patch via query params
         - **DO patch** with "oplogish" array with list of atomic operations
-        - plus my personal advice - DO patch with document version info to avoid unexpected overwrites 
+        - plus my personal advice - DO patch with document version info to avoid unexpected overwrites (TODO: after HATEOAS) 
 
 ## Todo
 - Authentication
 - API Testing
 - Nested modules
 - Hypermedia / HATEOAS
+- PATCH with version check
 - API Versioning

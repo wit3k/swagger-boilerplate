@@ -14,7 +14,7 @@ get:
       type: string
     - name: projectIds
       in: query
-      description: project id's to filter by
+      description: Project id's to filter by
       required: false
       type: array
       items:
@@ -23,7 +23,7 @@ get:
       collectionFormat: csv
     - name: contexts
       in: query
-      description: contexts to filter by
+      description: Contexts to filter by
       required: false
       type: array
       items:
@@ -31,7 +31,7 @@ get:
         format: uuid
     - name: tags
       in: query
-      description: tags to filter by
+      description: Tags to filter by
       required: false
       type: array
       items:
@@ -39,7 +39,7 @@ get:
       collectionFormat: csv
     - name: groups
       in: query
-      description: groups to filter by
+      description: Groups to filter by
       required: false
       type: array
       items:
@@ -48,27 +48,27 @@ get:
       collectionFormat: csv
     - name: limit
       in: query
-      description: maximum number of results to return
+      description: Maximum number of results to return
       required: false
       type: integer
       format: int32
     - name: offset
       in: query
-      description: offset of results to return
+      description: Offset of results to return
       required: false
       type: integer
       format: int32
     - name: orderby
       in: query
-      description: sort results by a given key
+      description: Sort results by a given key
       required: false
       type: string
   responses:
     '200':
-      description: task response
+      description: Task response
       headers:
         'Total-count':
-          description: information about total count of elements matching given criteria
+          description: Information about total count of elements matching given criteria
           type: integer
       schema:
         type: array
@@ -81,7 +81,7 @@ get:
 post:
   tags:
     - task
-  description: Creates a new task.  Duplicates are not allowed
+  description: Creates a new task. Duplicates are not allowed.
   operationId: addTask
   produces:
     - application/json

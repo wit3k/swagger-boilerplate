@@ -15,13 +15,13 @@ get:
       format: uuid
   responses:
     '200':
-      description: task response
+      description: Task response
       schema:
         $ref: '#/definitions/TaskInfo'
     '404':
-      description: not found
+      description: Not found
     default:
-      description: unexpected error
+      description: Unexpected error
       schema:
         $ref: '#/definitions/ErrorModel'
 patch:
@@ -49,13 +49,13 @@ patch:
           $ref: '#/definitions/PatchOperation'
   responses:
     '200':
-      description: task response
+      description: Task response
       schema:
         $ref: '#/definitions/TaskInfo'
     '404':
-      description: not found
+      description: Not found
     default:
-      description: unexpected error
+      description: Unexpected error
       schema:
         $ref: '#/definitions/ErrorModel'
 
@@ -73,10 +73,10 @@ delete:
       format: uuid
   responses:
     '204':
-      description: task deleted
+      description: Task deleted
     '404':
-      description: not found
+      description: Not found
     default:
-      description: unexpected error
+      description: Unexpected error
       schema:
         $ref: '#/definitions/ErrorModel'
