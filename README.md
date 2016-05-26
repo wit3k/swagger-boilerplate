@@ -20,6 +20,10 @@ To run swagger-ui server, yaml server and open swagger-ui in browser simply run:
 
 - To see swagger-ui with your compiled documentation visit: http://localhost:8080/?url=http://localhost:8090/
 - To fetch compiled swagger YAML visit: http://localhost:8090/
+- Validate project running:
+```
+swagger validate http://localhost:8090
+```
 
 ## Features included
 - Swagger-ui (http://swagger.io/swagger-ui/)
@@ -60,3 +64,4 @@ Most important files are:
 - Hypermedia / HATEOAS
 - PATCH with version check
 - API Versioning
+- Get rid of own yaml-server and use `swagger serve` when it will be implemented in `swagger-cli`
